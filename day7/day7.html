@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #8faadb;
+            margin: 0;
+        }
+        .container{
+            width: 400px;
+            height: 600px;
+            border: 2px solid black;
+            background-image: url('https://wallpapers.com/images/featured/whatsapp-chat-rmzlyx15fhausbaf.jpg');
+            background-size:cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+        .header{
+            background-color: #075e54;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            position: relative;
+            border-radius: 10px;
+
+        }
+        .info{
+            display:flex;
+            align-items: center;
+            cursor: pointer;
+            
+        }
+        .calling{
+            position: absolute;
+            right: 0px;
+        }
+        .call{
+            width: 40px;
+            height: 40px; 
+            padding: 5px;
+            border-radius: 50%;
+        }
+        .profile-pic{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin-right: 20px;
+            margin-left: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile-pic:focus{
+            transform: scale(4);
+        }
+        .name{
+            font-size: 30px;
+            color: white;
+
+        }
+        .chat{
+            padding: 5px;
+            display: flex;
+            overflow-y:scroll;
+            scrollbar-width: none;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+        .message{
+            border-radius: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            font-size: 15px;
+            position: relative;
+            max-width: 80%;
+            min-width: 40%;
+            
+        }
+        .sent{
+            background-color: #dcf8c6;
+            align-self: flex-end;
+            padding:5px;
+
+        }
+        .recieved{
+            background-color: #fff;
+            align-self: flex-start;
+            padding:5px;
+        }
+        .text{  
+            margin-bottom: 15px; 
+            display: block;
+        }
+        .time{
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            bottom: 1px;
+            right: 3px;
+
+        }
+        .chatimg,.vid{
+            width:100%;
+            margin-bottom: 10px;
+        }
+        .date{
+            background-color:lightgreen;
+            width: 50px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 10px;
+            align-self: center;
+            position: sticky;
+            top: 0; 
+            z-index: 1;      
+         }
+         .details {
+            background-color:ivory;
+            position: absolute;
+            display: none;
+            top:0px;
+            left: 0px;
+            height: 300px;
+            width: 100%;
+            border-radius: 10px;
+            z-index: 10;
+         }
+         .profile{
+            direction: flex;
+            align-items: center;
+         }
+         .dpic {
+            margin: 10px;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            transition: transform 0.3s ease-in-out,box-shadow 0.3s ease; 
+            transform-origin: top center;
+        }
+        .dpic:hover {
+            transform: scale(3); 
+            box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+        }
+         .dname,.d2name{
+            font-size: 30px;
+            color: black;
+            padding: 5px;
+         }
+         .d2name{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+         }
+         .info:focus ~ .details {
+            display: flex;
+            flex-direction: column;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+                <div class="info" tabindex="0">
+                    <img src="whatsapp-dp-48.jpg" alt="profilepic" class="profile-pic" tabindex="0">
+                    <span class="name">Faseeha</span>
+                </div>
+                <div class="details profile">
+                    <img src="whatsapp-dp-48.jpg" alt="profilepic" class="dpic">
+                    <span class="dname">Faseeha</span>
+                    <span class="dname">9390977503</span>
+                    <div class="dcalling">
+                        <img src="voc.png" alt="videocall" class="call">
+                        <img src="vc.png" alt="videocall" class="call">
+                    </div>
+                    <span class="d2name">Love it</span>
+                </div>
+                <div class="calling">
+                    <img src="voc.png" alt="videocall" class="call">
+                    <img src="vc.png" alt="videocall" class="call">
+                </div>
+        </div>
+        <div class="chat">
+                <!-- Day 1: Episode 1 -->
+                <span class="date">16 June</span>
+                <div class="message sent">
+                    <span class="text"> Can u suggest me a movie?</span>
+                    <span class="time">09:00AM</span>
+                </div>
+                <div class="message recieved">
+                    <span class="text">Ok fine! Watch sita ramam...u will definately love it!!!!</span>
+                    <span class="time">09:15AM</span>
+                </div>
+                <div class="message recieved">
+                    <img src="a6.jpg" alt="e6" class="chatimg">
+                    <span class="time">09:15AM</span>
+                </div>
+                <div class="message sent">
+                    <span class="text">really! is this really good? &#128561;.</span>
+                    <span class="time">09:30AM</span>
+                </div>
+                <div class="message sent">
+                    <span class="text">I will watch it!!!!</span>
+                    <span class="time">09:30AM</span>
+                </div>
+                <div class="message recieved">
+                    <span class="text">Ok done!</span>
+                    <span class="time">09:45AM</span>
+                </div>
+            
+                <!-- Day 2: Episode 2 -->
+                <span class="date">17 June</span>
+                <div class="message sent">
+                    <span class="text">I watched the movie last night</span>
+                    <span class="time">08:30AM</span>
+                </div>
+                <div class="message recieved">
+                    <span class="text">How was the movie?</span>
+                    <span class="time">08:45AM</span>
+                </div>
+                <div class="message sent">
+                    <span class="text">It was soo good!!!I loved</span>
+                    <span class="time">09:00AM</span>
+                </div>
+            
+                <!-- Day 3: Episode 3 -->
+                <span class="date">18 June</span>
+                <div class="message sent">
+                    <span class="text">The characters they played in the movie are just sooo good</span>
+                    <span class="time">11:00AM</span>
+                </div>
+                <div class="message recieved">
+                    <span class="text">Which is ur fav?</span>
+                    <span class="time">11:15AM</span>
+                </div>
+                <div class="message sent">
+                    <span class="text">Sita is just love!</span>
+                    <span class="time">11:30AM</span>
+                </div>
+            
+                <!-- Day 4: Episode 4 -->
+                <span class="date">19 July</span>
+                <div class="message sent">
+                    <span class="text">Which is ur fav character?</span>
+                    <span class="time">10:00AM</span>
+                </div>
+                <div class="message recieved">
+                    <span class="text">Mine also sita!</span>
+                    <span class="time">10:15AM</span>
+                </div>
+                <div class="message recieved">
+                    <img src="a2.avif" alt="e1" class="chatimg">
+                    <span class="time">10:16AM</span>
+                </div>
+                <div class="message sent">
+                    <span class="text">Thats good!</span>
+                    <span class="time">10:17AM</span>
+                </div>
+            
+                
+                <span class="date">20 June</span>
+                <div class="message sent">
+                    <span class="text">what are u doing?</span>
+                    <span class="time">02:00PM</span>
+                </div>
+                <div class="message recieved">
+                    <span class="text">Just listening songs and u?</span>
+                    <span class="time">02:15PM</span>
+                </div>
+                <div class="message sent">
+                    <span class="text">Yeah! same</span>
+                    <span class="time">02:30PM</span>
+                </div>
+            
+                <!-- Day 6: Episode 6 -->
+                <span class="date">21 June</span>
+                <div class="message sent">
+                    <span class="text">Can u tell me review the pic ,is this good ?</span>
+                    <span class="time">09:00AM</span>
+                </div>
+                <div class="message recieved">
+                    <span class="text">Ok send me</span>
+                    <span class="time">09:15AM</span>
+                </div>
+                <div class="message sent">
+                    <img src="a1.webp" alt="e1" class="chatimg">
+                    <span class="time">09:15AM</span>
+                </div>
+                <div class="message sent">
+                    <span class="text">I just loved it &#127881;</span>
+                    <span class="time">09:16AM</span>
+                </div>
+                <div class="message sent">
+                    <span class="text">wWhat a movie!!!!</span>
+                    <span class="time">09:16AM</span>
+                </div>
+            
+                <!-- Day 7: Episode 7 -->
+                <span class="date">22 June</span>
+                <div class="message sent">
+                    <span class="text">Thank you for suggesting the good movie</span>
+                    <span class="time">07:00PM</span>
+                </div>
+                <div class="message recieved">
+                    <span class="text">You are welcome.</span>
+                    <span class="time">07:15PM</span>
+                </div>
+                
+          </div>
+        
+    </div>
+</body>
+</html>
